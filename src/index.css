@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;600&family=Rock+Salt&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-gang {
+  font-family: 'Rock Salt', cursive;
+}
+
+.font-text {
+  font-family: 'Teko', sans-serif;
+}
+
+body {
+  @apply bg-black text-white font-text text-lg;
+}
+
+.gang-card {
+  @apply relative overflow-hidden;
+}
+
+.gang-card::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-60 transition-opacity;
+}
+
+.gang-card:hover::before {
+  @apply opacity-40;
+}
